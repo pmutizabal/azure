@@ -2,6 +2,8 @@
 en la primera conexión de un equipo local hay que instalar los siguientes paquetes
 
 Install-Module -Name AzureAD
+Install-Module -Scope Currentuser -Name AzureAD // Se puede reemplazar esta línea para otorgar permisos de administrador y no iniciar con mayor privilegios por la línea de comandos.
+
 Install-Module MSOnline
 
 $UserCredential = Get-Credential
