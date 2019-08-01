@@ -18,3 +18,18 @@ Account          Environment   TenantId                               TenantDoma
 -------          -----------   --------                               ------------     -----------
 ddddd@xxxxx.cl    AzureCloud   7439199c-3b4e-4deb-a6e3-466ade3dc821   xxxxx.cl         User
 
+---------------------------------------------------
+ Install-Module -Name AzureAD
+Install-Module : Se requieren permisos de administrador para instalar módulos en 'C:\Program Files\WindowsPowerShell\Modules'. Inicie sesión en el equipo con una cuenta que 
+tenga permisos de administrador e inténtelo de nuevo, o instale 'C:\Users\Pablo\Documents\WindowsPowerShell\Modules' agregando "-Scope CurrentUser" al comando. También puede 
+intentar ejecutar la sesión de Windows PowerShell con derechos elevados (Ejecutar como administrador).
+En línea: 1 Carácter: 1
++ Install-Module -Name AzureAD
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Install-Module], ArgumentException
+    + FullyQualifiedErrorId : InstallModuleNeedsCurrentUserScopeParameterForNonAdminUser,Install-Module
+
+----------------------
+Para solucionar este error, hay que colocar en la línea de instalación de los módulos  -Scope CurrentUser
+
+Install-Module -Name AzureAD -Scope CurrentUser
